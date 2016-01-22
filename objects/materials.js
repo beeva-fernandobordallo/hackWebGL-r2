@@ -8,13 +8,13 @@ var material = new THREE.MeshBasicMaterial( { color: 0xffff00, side: THREE.Doubl
 
 //material con textura y reflejos
 var Texture = THREE.ImageUtils.loadTexture( "images/moon.jpg" );
-	Texture.wrapS = asphaltTexture.wrapT = THREE.RepeatWrapping; 
+	Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
 	Texture.repeat.set( 12, 2 );	
 var material = new THREE.MeshPhongMaterial( { map: Texture,color: 0x888888, emissive: 0x888888, specular: 0x111111, shininess: 100, metal: true, transparent: true, opacity: 1, side: THREE.DoubleSide } );
 
 //material con textura sin reflejos
 var Texture = THREE.ImageUtils.loadTexture( "images/moon.jpg" );
-	Texture.wrapS = asphaltTexture.wrapT = THREE.RepeatWrapping; 
+	Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
 	Texture.repeat.set( 12, 2 );
 var material = new THREE.MeshBasicMaterial( { map: Texture,color: 0xFFFFFF, side: THREE.DoubleSide, transparent: true, opacity: 1  } );
 
